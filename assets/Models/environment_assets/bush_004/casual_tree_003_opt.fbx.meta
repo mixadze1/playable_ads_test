@@ -1,0 +1,126 @@
+{
+  "ver": "2.3.13",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "99e44473-a2f1-4528-8017-592525683755",
+  "files": [],
+  "subMetas": {
+    "d78fc": {
+      "importer": "gltf-mesh",
+      "uuid": "99e44473-a2f1-4528-8017-592525683755@d78fc",
+      "displayName": "",
+      "id": "d78fc",
+      "name": "Cube.025.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 1396
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7d6ab": {
+      "importer": "texture",
+      "uuid": "99e44473-a2f1-4528-8017-592525683755@7d6ab",
+      "displayName": "",
+      "id": "7d6ab",
+      "name": "base_color_texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/Models/environment_assets/bush_004/m_tree02_BaseColor.png"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "82e37": {
+      "importer": "gltf-material",
+      "uuid": "99e44473-a2f1-4528-8017-592525683755@82e37",
+      "displayName": "",
+      "id": "82e37",
+      "name": "m_tree02.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a24ed": {
+      "importer": "gltf-scene",
+      "uuid": "99e44473-a2f1-4528-8017-592525683755@a24ed",
+      "displayName": "",
+      "id": "a24ed",
+      "name": "casual_tree_003_opt.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "base_color_texture",
+        "uri": "db://assets/Models/environment_assets/bush_004/m_tree02_BaseColor.png"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "99e44473-a2f1-4528-8017-592525683755@d78fc"
+      ],
+      "skeletons": [],
+      "textures": [
+        "99e44473-a2f1-4528-8017-592525683755@7d6ab"
+      ],
+      "materials": [
+        "99e44473-a2f1-4528-8017-592525683755@82e37"
+      ],
+      "scenes": [
+        "99e44473-a2f1-4528-8017-592525683755@a24ed"
+      ]
+    }
+  }
+}

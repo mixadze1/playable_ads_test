@@ -1,0 +1,126 @@
+{
+  "ver": "2.3.13",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "f01fcb64-472d-4673-a0c9-47e2e669ac2f",
+  "files": [],
+  "subMetas": {
+    "2ba06": {
+      "importer": "gltf-mesh",
+      "uuid": "f01fcb64-472d-4673-a0c9-47e2e669ac2f@2ba06",
+      "displayName": "",
+      "id": "2ba06",
+      "name": "Circle.003.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 516
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7d6ab": {
+      "importer": "texture",
+      "uuid": "f01fcb64-472d-4673-a0c9-47e2e669ac2f@7d6ab",
+      "displayName": "",
+      "id": "7d6ab",
+      "name": "base_color_texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/Models/environment_assets/barrel_002_opt/Material.009_BaseColor.png"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fcd97": {
+      "importer": "gltf-material",
+      "uuid": "f01fcb64-472d-4673-a0c9-47e2e669ac2f@fcd97",
+      "displayName": "",
+      "id": "fcd97",
+      "name": "Material.009.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ad7cf": {
+      "importer": "gltf-scene",
+      "uuid": "f01fcb64-472d-4673-a0c9-47e2e669ac2f@ad7cf",
+      "displayName": "",
+      "id": "ad7cf",
+      "name": "barrel_006.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "base_color_texture",
+        "uri": "db://assets/Models/environment_assets/barrel_002_opt/Material.009_BaseColor.png"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "f01fcb64-472d-4673-a0c9-47e2e669ac2f@2ba06"
+      ],
+      "skeletons": [],
+      "textures": [
+        "f01fcb64-472d-4673-a0c9-47e2e669ac2f@7d6ab"
+      ],
+      "materials": [
+        "f01fcb64-472d-4673-a0c9-47e2e669ac2f@fcd97"
+      ],
+      "scenes": [
+        "f01fcb64-472d-4673-a0c9-47e2e669ac2f@ad7cf"
+      ]
+    }
+  }
+}

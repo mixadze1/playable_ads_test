@@ -1,0 +1,126 @@
+{
+  "ver": "2.3.13",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "bce9cf18-c80f-4a3d-ac25-7b65cd2ec9df",
+  "files": [],
+  "subMetas": {
+    "59063": {
+      "importer": "gltf-mesh",
+      "uuid": "bce9cf18-c80f-4a3d-ac25-7b65cd2ec9df@59063",
+      "displayName": "",
+      "id": "59063",
+      "name": "Куб.028.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 36
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7d6ab": {
+      "importer": "texture",
+      "uuid": "bce9cf18-c80f-4a3d-ac25-7b65cd2ec9df@7d6ab",
+      "displayName": "",
+      "id": "7d6ab",
+      "name": "base_color_texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/Models/environment_assets/fence_011/Material.009_BaseColor.png"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fcd97": {
+      "importer": "gltf-material",
+      "uuid": "bce9cf18-c80f-4a3d-ac25-7b65cd2ec9df@fcd97",
+      "displayName": "",
+      "id": "fcd97",
+      "name": "Material.009.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ad6e4": {
+      "importer": "gltf-scene",
+      "uuid": "bce9cf18-c80f-4a3d-ac25-7b65cd2ec9df@ad6e4",
+      "displayName": "",
+      "id": "ad6e4",
+      "name": "fence_011.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "base_color_texture",
+        "uri": "db://assets/Models/environment_assets/fence_011/Material.009_BaseColor.png"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "bce9cf18-c80f-4a3d-ac25-7b65cd2ec9df@59063"
+      ],
+      "skeletons": [],
+      "textures": [
+        "bce9cf18-c80f-4a3d-ac25-7b65cd2ec9df@7d6ab"
+      ],
+      "materials": [
+        "bce9cf18-c80f-4a3d-ac25-7b65cd2ec9df@fcd97"
+      ],
+      "scenes": [
+        "bce9cf18-c80f-4a3d-ac25-7b65cd2ec9df@ad6e4"
+      ]
+    }
+  }
+}

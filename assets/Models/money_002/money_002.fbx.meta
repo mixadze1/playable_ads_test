@@ -1,0 +1,126 @@
+{
+  "ver": "2.3.13",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "cbd76ed6-eaba-491e-90fe-7b6443720f24",
+  "files": [],
+  "subMetas": {
+    "4c5f2": {
+      "importer": "gltf-mesh",
+      "uuid": "cbd76ed6-eaba-491e-90fe-7b6443720f24@4c5f2",
+      "displayName": "",
+      "id": "4c5f2",
+      "name": "Money_stack_Money_Lowpoly1_UV1.007.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 76
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7d6ab": {
+      "importer": "texture",
+      "uuid": "cbd76ed6-eaba-491e-90fe-7b6443720f24@7d6ab",
+      "displayName": "",
+      "id": "7d6ab",
+      "name": "base_color_texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/Models/money_002/DefaultMaterial_BaseColor.1001.png"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e736c": {
+      "importer": "gltf-material",
+      "uuid": "cbd76ed6-eaba-491e-90fe-7b6443720f24@e736c",
+      "displayName": "",
+      "id": "e736c",
+      "name": "Material.004.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f02bc": {
+      "importer": "gltf-scene",
+      "uuid": "cbd76ed6-eaba-491e-90fe-7b6443720f24@f02bc",
+      "displayName": "",
+      "id": "f02bc",
+      "name": "money_002.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "base_color_texture",
+        "uri": "db://assets/Models/money_002/DefaultMaterial_BaseColor.1001.png"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "cbd76ed6-eaba-491e-90fe-7b6443720f24@4c5f2"
+      ],
+      "skeletons": [],
+      "textures": [
+        "cbd76ed6-eaba-491e-90fe-7b6443720f24@7d6ab"
+      ],
+      "materials": [
+        "cbd76ed6-eaba-491e-90fe-7b6443720f24@e736c"
+      ],
+      "scenes": [
+        "cbd76ed6-eaba-491e-90fe-7b6443720f24@f02bc"
+      ]
+    }
+  }
+}
