@@ -15,7 +15,7 @@ export class AppStartup extends Component {
     public start() 
     {
         this.appInstaller.installBinds();
-        this.game.Initialize()
+        this.game.initialize()
     }
     
 }
