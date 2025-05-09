@@ -1,14 +1,23 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component,  Node } from 'cc';
+import { AppInstaller } from './AppInstaller';
+import { Game } from './Game';
 const { ccclass, property } = _decorator;
 
 @ccclass('AppStartup')
 export class AppStartup extends Component {
-    start() {
 
-    }
+    @property(AppInstaller)
+    private appInstaller: AppInstaller = null; 
 
-    update(deltaTime: number) {
-        
+    @property(Game)
+    private game: Game = null;
+    
+    public start() 
+    {
+        this.appInstaller.installBinds();
+        this.game.Initialize()
     }
+    
 }
-
+
+
