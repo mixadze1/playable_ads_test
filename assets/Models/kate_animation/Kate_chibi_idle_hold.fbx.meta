@@ -172,7 +172,7 @@
       "uuid": "0c9be7e7-dcb5-4d5f-94f1-8eea9ea217cc@cbc2b",
       "displayName": "",
       "id": "cbc2b",
-      "name": "Scene.animation",
+      "name": "idle_hold.animation",
       "userData": {
         "gltfIndex": 0,
         "wrapMode": 2,
@@ -478,7 +478,7 @@
         "fps": 30,
         "splits": [
           {
-            "name": "Scene",
+            "name": "idle_hold",
             "from": 0,
             "to": 1.4333332777023315,
             "wrapMode": 2,

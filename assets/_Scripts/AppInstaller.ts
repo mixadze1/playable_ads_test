@@ -1,10 +1,12 @@
 import { _decorator, Component, Game, Node } from 'cc';
 import { ServiceLocator } from './ServiceLocator';
 import { StorageService } from './Services/StorageService';
-import { IInputService, InputService } from './Services/InputService';
 import { PlayerController } from './PlayerLogic/PlayerController';
 import { GameConfig } from './Configs/GameConfig';
-import { GameModel } from './Models/GameModel';
+import { GameModel, IPlayerInfo } from './Models/GameModel';
+import { PlayerMovementController } from './PlayerLogic/PlayerMovementController';
+import { PlayerAnimationHandler } from './PlayerLogic/PlayerAnimationHandler';
+import { CameraFollow } from './PlayerLogic/CameraFollow';
 const { ccclass, property } = _decorator;
 
 @ccclass('AppInstaller')
@@ -12,31 +14,40 @@ export class AppInstaller  extends Component
 {
     @property(GameConfig)
     gameConfig : GameConfig;
-
-    @property(InputService)
-    inputService: InputService
-
+ 
     @property(PlayerController)
     playerController: PlayerController
+
+    @property(PlayerMovementController)
+    playerMovement: PlayerMovementController
+
+    @property(PlayerAnimationHandler)
+    playerAnimations: PlayerAnimationHandler
+
+    @property(CameraFollow)
+    cameraFollow: CameraFollow;
 
     public installBinds() 
     {
         this.bindGameConfig();
         this.bindGameModel();
         this.bindStorageService();
-        this.bindInputService();
         this.bindPlayerController();
+        this.bindCameraFollow();
     }
+    bindCameraFollow() {
+        ServiceLocator.bind<CameraFollow>("CameraFollow", this.cameraFollow);
+    }
+    
     bindGameModel() {
-        ServiceLocator.bind<GameModel>("GameModel", new GameModel());
+        const gameModel = new GameModel();
+        ServiceLocator.bind<GameModel>("GameModel", gameModel);
     }
 
     bindPlayerController() {
         ServiceLocator.bind<PlayerController>("PlayerController", this.playerController);
-    }
-
-    bindInputService() {
-        ServiceLocator.bind<IInputService>("InputService", this.inputService);
+        ServiceLocator.bind<PlayerMovementController>("PlayerMovementController", this.playerMovement);
+        ServiceLocator.bind<PlayerAnimationHandler>("PlayerAnimationHandler", this.playerAnimations);
     }
 
     private bindGameConfig() {

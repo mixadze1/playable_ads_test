@@ -168,7 +168,7 @@
     "_bakeToReflectionProbe": true
   },
   {
-    "__type__": "cc.MeshCollider",
+    "__type__": "cc.BoxCollider",
     "_name": "",
     "_objFlags": 0,
     "__editorExtras__": {},
@@ -187,13 +187,17 @@
       "y": 0,
       "z": 0
     },
-    "_mesh": null,
-    "_convex": true,
+    "_size": {
+      "__type__": "cc.Vec3",
+      "x": 0.012,
+      "y": 0.002,
+      "z": 0.029
+    },
     "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "40pQ8hkddAT4gBdSB8MkiC"
+    "fileId": "762Hdl/pZN2oUIq5tLoDiL"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -215,6 +219,7 @@
       "__id__": 0
     },
     "fileId": "58k8xByKpdQI+4gszPYddw",
+    "instance": null,
     "targetOverrides": null
   }
 ]

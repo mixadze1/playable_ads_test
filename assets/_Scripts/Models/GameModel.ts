@@ -3,24 +3,55 @@ import { StorageService } from '../Services/StorageService';
 const { ccclass } = _decorator;
 
 @ccclass('GameModel')
-export class GameModel {
-    private readonly SaveKey: string = 'Game_model_save_key';
-    private storageService!: StorageService;
+export class GameModel implements IPlayerInfo {
 
-    public State: number = 0;
+    
 
-    public initialize(storageService: StorageService) {
-        this.storageService = storageService;
+    public IsMove: boolean = false;
+    public IsCollectedEntities: boolean = false;
+
+    public Event = new EventTarget();
+
+    public readonly MoveStartKey = 'start-move';
+    public readonly MoveEndKey = 'end-move';
+
+    public readonly OnCollectEntityKey = 'collect-entity';
+    public readonly OnEmptyEntityKey = 'empty-entity';
+
+    public initialize() {
+        
     }
 
-    public load(): void {
-        const data = this.storageService.load<GameModel>(this.SaveKey);
-        if (data) {
-            this.State = data.State;
-        }
+    isMove(): boolean {
+        return this.IsMove;
     }
 
-    public save(): void {
-        this.storageService.save(this.SaveKey, GameModel);
+    public onMove()
+    {
+        this.IsMove = true;
+       this.Event.dispatchEvent(new CustomEvent(this.MoveStartKey));
     }
+
+    public onStopMove()
+    {
+        this.IsMove = false;
+               this.Event.dispatchEvent(new CustomEvent(this.MoveEndKey));
+    }
+
+    public onEmptyEntities()
+    {
+        this.IsCollectedEntities = false;
+               this.Event.dispatchEvent(new CustomEvent(this.OnEmptyEntityKey));
+
+    }
+
+    public onNotEmptyEntities()
+    {
+        this.IsCollectedEntities = false;
+        this.Event.dispatchEvent(new CustomEvent(this.OnCollectEntityKey));
+    }
+}
+
+export interface IPlayerInfo {
+    isMove(): boolean;
 }

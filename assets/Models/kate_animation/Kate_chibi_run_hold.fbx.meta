@@ -172,7 +172,7 @@
       "uuid": "d0573d87-b40c-4cb1-94dd-08207a7a201a@cbc2b",
       "displayName": "",
       "id": "cbc2b",
-      "name": "Scene.animation",
+      "name": "run_hold.animation",
       "userData": {
         "gltfIndex": 0,
         "wrapMode": 2,
@@ -478,7 +478,7 @@
         "fps": 30,
         "splits": [
           {
-            "name": "Scene",
+            "name": "run_hold",
             "from": 0,
             "to": 0.75,
             "wrapMode": 2,

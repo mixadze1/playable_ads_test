@@ -172,11 +172,11 @@
       "uuid": "1a8d9be6-577f-4eea-bf27-557d0893db0f@cbc2b",
       "displayName": "",
       "id": "cbc2b",
-      "name": "Scene.animation",
+      "name": "run.animation",
       "userData": {
         "gltfIndex": 0,
         "wrapMode": 2,
-        "sample": 30,
+        "sample": 60,
         "span": {
           "from": 0,
           "to": 0.75
@@ -478,11 +478,12 @@
         "fps": 30,
         "splits": [
           {
-            "name": "Scene",
+            "name": "run",
             "from": 0,
             "to": 0.75,
             "wrapMode": 2,
-            "previousId": "cbc2b"
+            "previousId": "cbc2b",
+            "fps": 60
           }
         ]
       }
