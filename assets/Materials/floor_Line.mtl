@@ -11,8 +11,7 @@
   "_techIdx": 0,
   "_defines": [
     {
-      "USE_INSTANCING": true,
-      "USE_ALBEDO_MAP": true
+      "GLOSSINESS_MAP_CHANNEL": "g"
     },
     {},
     {},
@@ -59,16 +58,36 @@
   "_props": [
     {
       "mainTexture": {
-        "__uuid__": "75c5cb86-5cd9-4258-acbc-8f4a40bf7025@6c48a",
+        "__uuid__": "4c6959f1-f18c-4215-9f06-aa4cee077a80@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "emissive": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 255
+      },
+      "shininessExponent": 101.6,
+      "specularColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 0
+      },
+      "transparencyMap": {
+        "__uuid__": "f8e727a9-d49f-4661-8f01-e2f7e8dfce8d@6c48a",
         "__expectedType__": "cc.Texture2D"
       },
       "tilingOffset": {
         "__type__": "cc.Vec4",
-        "x": 1.9,
-        "y": 1,
+        "x": 4.4,
+        "y": 4.8,
         "z": 0,
         "w": 0
-      }
+      },
+      "normalStrength": 1.438
     },
     {},
     {},

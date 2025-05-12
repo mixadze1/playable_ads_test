@@ -12,7 +12,13 @@
   "_defines": [
     {
       "USE_INSTANCING": true,
-      "USE_ALBEDO_MAP": true
+      "GLOSSINESS_MAP_CHANNEL": "g",
+      "USE_ALBEDO_MAP": true,
+      "USE_EMISSIVE_MAP": true,
+      "USE_EMISSIVESCALE_MAP": true,
+      "OCCLUSION_UV": "v_uv1",
+      "OCCLUSION_CHANNEL": "g",
+      "USE_ALPHA_TEST": true
     },
     {},
     {},
@@ -59,16 +65,31 @@
   "_props": [
     {
       "mainTexture": {
+        "__uuid__": "8ce285ac-e54c-4776-9067-a405ba3e2e5f@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "alphaThreshold": 0.484,
+      "emissiveMap": {
+        "__uuid__": "5e75b1a0-eedc-4089-a6bb-fcb6bbda2b30@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "emissiveScale": 1.1,
+      "emissiveScaleMap": {
         "__uuid__": "75c5cb86-5cd9-4258-acbc-8f4a40bf7025@6c48a",
         "__expectedType__": "cc.Texture2D"
       },
-      "tilingOffset": {
-        "__type__": "cc.Vec4",
-        "x": 1.9,
-        "y": 1,
-        "z": 0,
-        "w": 0
-      }
+      "shininessExponent": 98.5,
+      "specularMap": {
+        "__uuid__": "5e75b1a0-eedc-4089-a6bb-fcb6bbda2b30@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "specularFactor": -0.1,
+      "transparencyMap": {
+        "__uuid__": "5e75b1a0-eedc-4089-a6bb-fcb6bbda2b30@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "normalStrength": 1.438,
+      "metallic": 0.292
     },
     {},
     {},

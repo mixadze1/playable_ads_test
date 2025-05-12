@@ -132,7 +132,7 @@
       "__uuid__": "bce9cf18-c80f-4a3d-ac25-7b65cd2ec9df@59063",
       "__expectedType__": "cc.Mesh"
     },
-    "_shadowCastingMode": 0,
+    "_shadowCastingMode": 1,
     "_shadowReceivingMode": 1,
     "_shadowBias": 0,
     "_shadowNormalBias": 0,
@@ -208,6 +208,8 @@
       "__id__": 0
     },
     "fileId": "2fG1P+1JhdvIvJm+yHuaRM",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {

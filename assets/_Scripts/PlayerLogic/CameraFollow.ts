@@ -28,6 +28,8 @@ export class CameraFollow extends Component {
         Vec3.lerp(this.smoothedPos, this.node.worldPosition, this.desiredPos, this.gameConfig.Ratio);
         this.node.setWorldPosition(this.smoothedPos);
 
-        this.node.lookAt(this.target.worldPosition);
+        const pos = this.target.worldPosition;
+        const offsetPos = new Vec3(pos.x, pos.y + this.gameConfig.CameraOffsetTarget, pos.z);
+        this.node.lookAt(offsetPos);
     }
 }

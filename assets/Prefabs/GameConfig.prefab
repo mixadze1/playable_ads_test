@@ -68,8 +68,14 @@
     "__prefab": {
       "__id__": 3
     },
-    "speed": 5,
-    "rotationSpeed": 180,
+    "Speed": 4,
+    "OffsetCamera": {
+      "__type__": "cc.Vec3",
+      "x": -1.2,
+      "y": 5.4,
+      "z": 2.9
+    },
+    "Ratio": 0.05,
     "_id": ""
   },
   {

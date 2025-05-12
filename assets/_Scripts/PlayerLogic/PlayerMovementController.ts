@@ -26,23 +26,31 @@ export class PlayerMovementController extends Component
     }
 
     public update(deltaTime: number) {
-        if (!this.rigidbody || !this.gameModel.IsMove) 
+        if (!this.rigidbody || !this.gameModel.IsMove)
+        {
+            this.stopMove();
             return;
+        }
 
-        const velocity = this.moveDirection.clone().normalize().multiplyScalar(this.gameConfig.Speed);
+        const velocity = this.moveDirection.normalize().multiplyScalar(this.gameConfig.Speed);
         this.rigidbody.setLinearVelocity(velocity);
 
+
         if (!this.moveDirection.equals(Vec3.ZERO)) {
-            const currentRotation = this.node.rotation;
-            const targetForward = this.moveDirection.clone().normalize();
+            const targetForward = this.moveDirection.normalize();
             const up = Vec3.UP;
 
             const targetRotation = new Quat();
             Quat.fromViewUp(targetRotation, targetForward, up);
 
-       
             this.node.setRotation(targetRotation);
         }
+    }
+
+    private stopMove() {
+        const currentPosition = this.node.getPosition();
+        this.node.setPosition(currentPosition.x, 0, currentPosition.z);
+        this.rigidbody.setLinearVelocity(Vec3.ZERO);
     }
 
     private onJoystickEnd() {
@@ -57,7 +65,6 @@ export class PlayerMovementController extends Component
 
     private onJoystickMove(event: EventTouch, data: JoystickDataType) {
         this.moveDirection.set(data.moveVec.x, 0, -data.moveVec.y);
-        Logger.Log("Pos: " + data.moveVec);
         this.gameModel.IsMove = true;
         this.gameModel.onMove();
     }

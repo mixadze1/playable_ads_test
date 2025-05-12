@@ -12,4 +12,7 @@ export class GameConfig extends Component {
 
     @property({ type: CCFloat, tooltip: "Camera ratio", displayName: "Ratio", group: "Camera" })
     Ratio: number = 0.05;
+
+     @property({ type: CCFloat, tooltip: "Offset Target", displayName: "Offset Target", group: "Camera" })
+    CameraOffsetTarget: Readonly<number>;
 }

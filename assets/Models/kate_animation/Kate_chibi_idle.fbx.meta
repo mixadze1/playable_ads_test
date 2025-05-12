@@ -551,9 +551,8 @@
         "_techIdx": 0,
         "_defines": [
           {
-            "DCC_APP_NAME": 2,
-            "USE_ALBEDO_MAP": true,
-            "HAS_EXPORTED_METALLIC": true
+            "USE_INSTANCING": true,
+            "USE_ALBEDO_MAP": true
           },
           {},
           {},
@@ -609,10 +608,7 @@
               "g": 231,
               "b": 231,
               "a": 255
-            },
-            "shininessExponent": 25,
-            "specularFactor": 0.25,
-            "transparencyFactor": 0
+            }
           },
           {},
           {},
@@ -632,9 +628,8 @@
         "_techIdx": 0,
         "_defines": [
           {
-            "DCC_APP_NAME": 2,
-            "USE_ALBEDO_MAP": true,
-            "HAS_EXPORTED_METALLIC": true
+            "USE_INSTANCING": true,
+            "USE_ALBEDO_MAP": true
           },
           {},
           {},
@@ -690,10 +685,7 @@
               "g": 231,
               "b": 231,
               "a": 255
-            },
-            "shininessExponent": 25,
-            "specularFactor": 0.25,
-            "transparencyFactor": 0
+            }
           },
           {},
           {},
