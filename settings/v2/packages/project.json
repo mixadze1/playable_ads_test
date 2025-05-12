@@ -6,5 +6,27 @@
       "width": 1080,
       "height": 2560
     }
+  },
+  "physics": {
+    "collisionGroups": [
+      {
+        "index": 1,
+        "name": "Player"
+      },
+      {
+        "index": 2,
+        "name": "walEntities"
+      },
+      {
+        "index": 3,
+        "name": "wall"
+      }
+    ],
+    "collisionMatrix": {
+      "0": 15,
+      "1": 11,
+      "2": 13,
+      "3": 15
+    }
   }
 }
