@@ -33,8 +33,9 @@ export class PlayerMovementController extends Component
         }
 
         const velocity = this.moveDirection.normalize().multiplyScalar(this.gameConfig.Speed);
-        this.rigidbody.setLinearVelocity(velocity);
-
+         this.rigidbody.setLinearVelocity(velocity);
+        const currentPosition = this.node.getPosition();
+        this.node.setPosition(currentPosition.x, 0, currentPosition.z);
 
         if (!this.moveDirection.equals(Vec3.ZERO)) {
             const targetForward = this.moveDirection.normalize();

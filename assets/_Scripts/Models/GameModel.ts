@@ -1,25 +1,91 @@
-import { _decorator } from 'cc';
+import { _decorator, Color } from 'cc';
 import { StorageService } from '../Services/StorageService';
+import { GameConfig } from '../Configs/GameConfig';
+import { Logger } from '../Logger';
+import { GameEntityModel } from '../EntitiesLogic/GameEntityModel';
+import { EntityType } from '../EntitiesLogic/EntitiesCollectionHandler';
 const { ccclass } = _decorator;
 
 @ccclass('GameModel')
 export class GameModel implements IPlayerInfo {
-
+  
     
-
+    private gameConfig: GameConfig;
+    
     public IsMove: boolean = false;
-    public IsCollectedEntities: boolean = false;
 
     public Event = new EventTarget();
+
+    private collectEntities: GameEntityModel[] = [];
 
     public readonly MoveStartKey = 'start-move';
     public readonly MoveEndKey = 'end-move';
 
     public readonly OnCollectEntityKey = 'collect-entity';
+    public readonly OnRemoveEntityKey = 'remove-entity';
+
     public readonly OnEmptyEntityKey = 'empty-entity';
 
-    public initialize() {
-        
+    public readonly OnCollectEntity = 'collect-entity';
+
+    public initialize(gameConfig: GameConfig) {
+        this.gameConfig = gameConfig;
+    }
+
+    isMaxEntities() {
+        if(this.collectEntities.length >= this.gameConfig.MaxEntities)
+            return true;
+        return false;
+    }
+
+    amountEntities() {
+        return this.collectEntities.length;
+    }
+
+    getEntityType()
+    {
+        Logger.Log("GetEntityType");
+        if(this.isEmptyEntity())
+            return EntityType.Default;
+
+        return this.collectEntities[0].TypeEntity;
+    }
+
+    onCollectEntities(entityType: EntityType)
+    {
+        if(this.isMaxEntities())
+        {
+            Logger.Log("[gameModel] on try Collect. Max entities!", Color.YELLOW);
+            return;
+        }
+
+        if(this.collectEntities.length != 0 && this.collectEntities[0].TypeEntity != entityType)
+        {           
+            Logger.Log("[gameModel] on try Collect. Not same entity!", Color.YELLOW);
+            return;
+        }
+
+        this.collectEntities.push(new GameEntityModel(entityType));
+        this.Event.dispatchEvent(new CustomEvent(this.OnCollectEntityKey));
+        Logger.Log(`[gameModel] Add entity: ${this.collectEntities[0].TypeEntity.toString()}, remaining: ${this.collectEntities.length}`, Color.GREEN);
+    }
+
+    onRemoveEntity()
+    {
+        if(this.isEmptyEntity())
+        {
+            this.onEmptyEntities();
+            Logger.Log("[gameModel] on Deselect Zero entities!", Color.YELLOW);
+            return;
+        }
+        this.collectEntities.pop();
+                this.Event.dispatchEvent(new CustomEvent(this.OnRemoveEntityKey));
+
+        Logger.Log(`[gameModel] Removed entity of type  ${this.collectEntities[0].TypeEntity.toString()},  remaining: ${this.collectEntities.length}`, Color.GREEN);
+    }
+    
+    isEmptyEntity() {
+        return this.collectEntities.length <= 0;
     }
 
     isMove(): boolean {
@@ -35,20 +101,12 @@ export class GameModel implements IPlayerInfo {
     public onStopMove()
     {
         this.IsMove = false;
-               this.Event.dispatchEvent(new CustomEvent(this.MoveEndKey));
+        this.Event.dispatchEvent(new CustomEvent(this.MoveEndKey));
     }
 
     public onEmptyEntities()
     {
-        this.IsCollectedEntities = false;
-               this.Event.dispatchEvent(new CustomEvent(this.OnEmptyEntityKey));
-
-    }
-
-    public onNotEmptyEntities()
-    {
-        this.IsCollectedEntities = false;
-        this.Event.dispatchEvent(new CustomEvent(this.OnCollectEntityKey));
+        this.Event.dispatchEvent(new CustomEvent(this.OnEmptyEntityKey));
     }
 }
 

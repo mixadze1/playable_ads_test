@@ -17,6 +17,7 @@ export class PlayerAnimationHandler extends Component {
     static readonly ANIMATION_IDLE = 'Idle';
     static readonly ANIMATION_MOVE = 'run';
     static readonly ANIMATION_COLLECT = 'run_hold';
+    static readonly ANIMATION_IDLE_COLLECT = 'idle_hold';
 
     public initialize(gameConfig: GameConfig, gameModel: GameModel) {
         this.gameConfig = gameConfig;
@@ -32,16 +33,18 @@ export class PlayerAnimationHandler extends Component {
     }
 
     private onStopMove() {
-        if (this.animation.getState(PlayerAnimationHandler.ANIMATION_IDLE) 
-           && this.animation.getState(PlayerAnimationHandler.ANIMATION_IDLE).isPlaying) {
-           return;
+     
+        if(!this.gameModel.isEmptyEntity())
+        {
+            this.animation.play(PlayerAnimationHandler.ANIMATION_IDLE_COLLECT);
+            return;
         }
 
         this.animation.play(PlayerAnimationHandler.ANIMATION_IDLE);
     }
 
     private onMove() {
-        if (this.gameModel.IsCollectedEntities) {
+        if (!this.gameModel.isEmptyEntity()) {
 
             if (this.animation.getState(PlayerAnimationHandler.ANIMATION_COLLECT) 
                 && this.animation.getState(PlayerAnimationHandler.ANIMATION_COLLECT).isPlaying) {

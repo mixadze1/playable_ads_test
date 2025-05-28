@@ -15,4 +15,8 @@ export class GameConfig extends Component {
 
      @property({ type: CCFloat, tooltip: "Offset Target", displayName: "Offset Target", group: "Camera" })
     CameraOffsetTarget: Readonly<number>;
+
+    @property
+    MaxEntities: number = 32;
+    AmountCollectEntityPerOnce: number = 1;
 }
