@@ -1,4 +1,4 @@
-import { _decorator, Component, Collider, ITriggerEvent, ICollisionEvent, Node, instantiate, Vec3, game, Color } from 'cc';
+import { _decorator, Component, Collider, ITriggerEvent, ICollisionEvent, Node, instantiate, Vec3, game, Color, tween } from 'cc';
 import { EntityType } from './EntitiesCollectionHandler';
 import { EntitiesConfigs } from './EntitiesConfigs';
 import { Logger } from '../Logger';
@@ -24,6 +24,12 @@ export class FillCollectionHandler extends Component {
     
     @property
     durationPick: number = 1;
+
+    @property
+    delayPickOne: number = 0.05;
+
+    @property
+    amountEggsPerOnce: number = 4;
 
 
     private readonly OnCollectEntity = 'onCollect';
@@ -78,6 +84,10 @@ export class FillCollectionHandler extends Component {
             return;
 
         factory.onTouch();
+        if(factory.entityFrom == this.gameModel.getEntityType())
+        {
+            this.gameModel.onRemoveEntity();
+        }
     }
 
     private onCollisionEnter(event: ICollisionEvent) {
@@ -99,17 +109,29 @@ export class FillCollectionHandler extends Component {
         return false;
     }
 
-    private CheckTouchEntitiesTrigger(otherNode: Node): boolean {
-        const fillTriggerComponent = otherNode.getComponent(FillTriggerView);
-        if (fillTriggerComponent) {
-            this.deltaTime += game.deltaTime;
-            if (this.deltaTime >= this.durationPick) {
-                this.deltaTime = 0;
-                Logger.Log("[Fill trigger] Pick entity!", Color.GREEN);
-            this.gameModel.onCollectEntities(fillTriggerComponent.EntityType);
-            }
-            return true;
+   private CheckTouchEntitiesTrigger(otherNode: Node): boolean {
+    const fillTriggerComponent = otherNode.getComponent(FillTriggerView);
+    if (fillTriggerComponent) {
+        this.deltaTime += game.deltaTime;
+        if (this.deltaTime >= this.durationPick) {
+            this.deltaTime = 0;
+            Logger.Log("[Fill trigger] Pick entity!", Color.GREEN);
+            this.runCollectWithTween(fillTriggerComponent.EntityType);
         }
-        return false;
+        return true;
     }
+    return false;
+}
+
+private runCollectWithTween(entityType: EntityType) {
+    let t = tween(this.node);
+
+    for (let i = 0; i < this.amountEggsPerOnce; i++) {
+        t = t.delay(this.delayPickOne).call(() => {
+            this.gameModel.onCollectEntities(entityType);
+        });
+    }
+
+    t.start();
+}
 }

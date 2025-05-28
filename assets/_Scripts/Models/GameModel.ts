@@ -1,4 +1,4 @@
-import { _decorator, Color } from 'cc';
+import { _decorator, Color, Node } from 'cc';
 import { StorageService } from '../Services/StorageService';
 import { GameConfig } from '../Configs/GameConfig';
 import { Logger } from '../Logger';
@@ -17,6 +17,8 @@ export class GameModel implements IPlayerInfo {
     public Event = new EventTarget();
 
     private collectEntities: GameEntityModel[] = [];
+
+    public lastEntityType: EntityType = EntityType.Default;
 
     public readonly MoveStartKey = 'start-move';
     public readonly MoveEndKey = 'end-move';
@@ -44,11 +46,7 @@ export class GameModel implements IPlayerInfo {
 
     getEntityType()
     {
-        Logger.Log("GetEntityType");
-        if(this.isEmptyEntity())
-            return EntityType.Default;
-
-        return this.collectEntities[0].TypeEntity;
+        return this.lastEntityType;
     }
 
     onCollectEntities(entityType: EntityType)
@@ -65,6 +63,7 @@ export class GameModel implements IPlayerInfo {
             return;
         }
 
+        this.lastEntityType = entityType;
         this.collectEntities.push(new GameEntityModel(entityType));
         this.Event.dispatchEvent(new CustomEvent(this.OnCollectEntityKey));
         Logger.Log(`[gameModel] Add entity: ${this.collectEntities[0].TypeEntity.toString()}, remaining: ${this.collectEntities.length}`, Color.GREEN);
@@ -78,10 +77,9 @@ export class GameModel implements IPlayerInfo {
             Logger.Log("[gameModel] on Deselect Zero entities!", Color.YELLOW);
             return;
         }
-        this.collectEntities.pop();
-                this.Event.dispatchEvent(new CustomEvent(this.OnRemoveEntityKey));
-
         Logger.Log(`[gameModel] Removed entity of type  ${this.collectEntities[0].TypeEntity.toString()},  remaining: ${this.collectEntities.length}`, Color.GREEN);
+        this.collectEntities.pop();
+        this.Event.dispatchEvent(new CustomEvent(this.OnRemoveEntityKey));
     }
     
     isEmptyEntity() {
