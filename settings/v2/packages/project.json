@@ -20,13 +20,19 @@
       {
         "index": 3,
         "name": "wall"
+      },
+      {
+        "index": 4,
+        "name": "entities"
       }
     ],
     "collisionMatrix": {
-      "0": 15,
-      "1": 11,
-      "2": 13,
-      "3": 15
+      "0": 31,
+      "1": 27,
+      "2": 29,
+      "3": 31,
+      "4": 31
     }
-  }
+  },
+  "custom_joint_texture_layouts": []
 }
