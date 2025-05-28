@@ -14,10 +14,10 @@ export class PlayerAnimationHandler extends Component {
     @property(Animation)
     private animation: SkeletalAnimation;
 
-    static readonly ANIMATION_IDLE = 'Idle';
-    static readonly ANIMATION_MOVE = 'run';
-    static readonly ANIMATION_COLLECT = 'run_hold';
-    static readonly ANIMATION_IDLE_COLLECT = 'idle_hold';
+    static readonly ANIMATION_IDLE = 'Armature|Armature|idle';
+    static readonly ANIMATION_MOVE = 'Armature|Armature|run';
+    static readonly ANIMATION_COLLECT = 'Armature|Armature|run_carry';
+    static readonly ANIMATION_IDLE_COLLECT = 'Armature|Armature|idle_carry';
 
     public initialize(gameConfig: GameConfig, gameModel: GameModel) {
         this.gameConfig = gameConfig;

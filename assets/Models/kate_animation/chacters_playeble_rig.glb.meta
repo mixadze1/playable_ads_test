@@ -1,0 +1,325 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "3893bd03-1d1b-42c1-b921-11e0abe2a1f1",
+  "files": [
+    "__original-animation-0.cconb",
+    "__original-animation-1.cconb",
+    "__original-animation-2.cconb",
+    "__original-animation-3.cconb"
+  ],
+  "subMetas": {
+    "fa787": {
+      "importer": "gltf-mesh",
+      "uuid": "3893bd03-1d1b-42c1-b921-11e0abe2a1f1@fa787",
+      "displayName": "",
+      "id": "fa787",
+      "name": "kate_body_geo.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 1108
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "517db": {
+      "importer": "gltf-mesh",
+      "uuid": "3893bd03-1d1b-42c1-b921-11e0abe2a1f1@517db",
+      "displayName": "",
+      "id": "517db",
+      "name": "nicole_body_geo.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 1223
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a34c9": {
+      "importer": "gltf-mesh",
+      "uuid": "3893bd03-1d1b-42c1-b921-11e0abe2a1f1@a34c9",
+      "displayName": "",
+      "id": "a34c9",
+      "name": "old-paul_sequence_body_geo.mesh",
+      "userData": {
+        "gltfIndex": 2,
+        "triangleCount": 1354
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "553e5": {
+      "importer": "gltf-mesh",
+      "uuid": "3893bd03-1d1b-42c1-b921-11e0abe2a1f1@553e5",
+      "displayName": "",
+      "id": "553e5",
+      "name": "paul_body_geo.mesh",
+      "userData": {
+        "gltfIndex": 3,
+        "triangleCount": 1059
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d6352": {
+      "importer": "gltf-mesh",
+      "uuid": "3893bd03-1d1b-42c1-b921-11e0abe2a1f1@d6352",
+      "displayName": "",
+      "id": "d6352",
+      "name": "robert_sequence_body_geo.mesh",
+      "userData": {
+        "gltfIndex": 4,
+        "triangleCount": 1476
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9b81c": {
+      "importer": "gltf-animation",
+      "uuid": "3893bd03-1d1b-42c1-b921-11e0abe2a1f1@9b81c",
+      "displayName": "",
+      "id": "9b81c",
+      "name": "Armature|Armature|idle.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.6666666269302368
+        },
+        "events": []
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "950ca": {
+      "importer": "gltf-animation",
+      "uuid": "3893bd03-1d1b-42c1-b921-11e0abe2a1f1@950ca",
+      "displayName": "",
+      "id": "950ca",
+      "name": "Armature|Armature|idle_carry.animation",
+      "userData": {
+        "gltfIndex": 1,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.6666666269302368
+        },
+        "events": []
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "d415f": {
+      "importer": "gltf-animation",
+      "uuid": "3893bd03-1d1b-42c1-b921-11e0abe2a1f1@d415f",
+      "displayName": "",
+      "id": "d415f",
+      "name": "Armature|Armature|run.animation",
+      "userData": {
+        "gltfIndex": 2,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.6666666865348816
+        },
+        "events": []
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "89a0a": {
+      "importer": "gltf-animation",
+      "uuid": "3893bd03-1d1b-42c1-b921-11e0abe2a1f1@89a0a",
+      "displayName": "",
+      "id": "89a0a",
+      "name": "Armature|Armature|run_carry.animation",
+      "userData": {
+        "gltfIndex": 3,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.6666666865348816
+        },
+        "events": []
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "f9d1d": {
+      "importer": "gltf-skeleton",
+      "uuid": "3893bd03-1d1b-42c1-b921-11e0abe2a1f1@f9d1d",
+      "displayName": "",
+      "id": "f9d1d",
+      "name": "Armature.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 22
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "add57": {
+      "importer": "gltf-scene",
+      "uuid": "3893bd03-1d1b-42c1-b921-11e0abe2a1f1@add57",
+      "displayName": "",
+      "id": "add57",
+      "name": "chacters_playeble_rig.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "animationImportSettings": [
+      {
+        "name": "Armature|Armature|idle",
+        "duration": 1.6666666269302368,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Armature|Armature|idle",
+            "from": 0,
+            "to": 1.6666666269302368,
+            "wrapMode": 2,
+            "previousId": "9b81c"
+          }
+        ]
+      },
+      {
+        "name": "Armature|Armature|idle_carry",
+        "duration": 1.6666666269302368,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Armature|Armature|idle_carry",
+            "from": 0,
+            "to": 1.6666666269302368,
+            "wrapMode": 2,
+            "previousId": "950ca"
+          }
+        ]
+      },
+      {
+        "name": "Armature|Armature|run",
+        "duration": 0.6666666865348816,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Armature|Armature|run",
+            "from": 0,
+            "to": 0.6666666865348816,
+            "wrapMode": 2,
+            "previousId": "d415f"
+          }
+        ]
+      },
+      {
+        "name": "Armature|Armature|run_carry",
+        "duration": 0.6666666865348816,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Armature|Armature|run_carry",
+            "from": 0,
+            "to": 0.6666666865348816,
+            "wrapMode": 2,
+            "previousId": "89a0a"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "3893bd03-1d1b-42c1-b921-11e0abe2a1f1@fa787",
+        "3893bd03-1d1b-42c1-b921-11e0abe2a1f1@517db",
+        "3893bd03-1d1b-42c1-b921-11e0abe2a1f1@a34c9",
+        "3893bd03-1d1b-42c1-b921-11e0abe2a1f1@553e5",
+        "3893bd03-1d1b-42c1-b921-11e0abe2a1f1@d6352"
+      ],
+      "skeletons": [
+        "3893bd03-1d1b-42c1-b921-11e0abe2a1f1@f9d1d"
+      ],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "3893bd03-1d1b-42c1-b921-11e0abe2a1f1@add57"
+      ]
+    }
+  }
+}
